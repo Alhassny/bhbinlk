@@ -26,7 +26,7 @@ client.on('message', message => {
  let BcList = new Discord.RichEmbed()
  .setThumbnail(message.author.avatarURL)
  .setAuthor(`محتوى الرساله ${args}`)
- .setDescription(`برودكاست بـ امبد 📝\nبرودكاست بدون امبد✏ \nلديك دقيقه للأختيار قبل الغاء البرودكاست\nيمكنك اضافة اسم السيرفر في البرودكاست عن طريق كتابة <server>\nيمكنك اضافة اسم المرسل في البرودكاست عن طريق كتاية <by>\nيمكنك منشنة العضو في الرساله عن طريق كتابة <user>`)
+.setDescription(`هل أنت متأكد من أرسالك للبرودكاست؟`)
  if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(BcList).then(msg => {
  msg.react('✏')
  .then(() => msg.react('✏'))
@@ -42,9 +42,9 @@ client.on('message', message => {
  message.guild.members.forEach(m => {
  let NormalRep = args.replace('[server]' ,message.guild.name).replace('[user]', m).replace('[by]', `${message.author}`)
  m.send(NormalRep).then(ms => {
-       i++;
+       i--;
  }).catch(err => {
-      i--;
+      i++;
  })
  })
  let nj7 = i;
@@ -53,7 +53,7 @@ client.on('message', message => {
  var results = `**Results | النتائج
   
   نجاح` + ' `' + `${nj7}` + '`' + `
-  فشل` + ' `' + `${fshl}` + + '`';
+  فشل` + ' `' + `${fshl}` + + '`**';
   message.channel.send(results);
  })
  })
