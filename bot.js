@@ -38,7 +38,7 @@ client.on('message', message => {
  
  NormalBc.on("collect", r => {
    message.channel.send(`:ballot_box_with_check: **تم أرسال البرودكاست بنجاح**`);
- let i = 0;
+let i = "0";
  message.guild.members.forEach(m => {
  let NormalRep = args.replace('[server]' ,message.guild.name).replace('[user]', m).replace('[by]', `${message.author}`)
  m.send(NormalRep).then(ms => {
