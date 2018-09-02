@@ -52,7 +52,7 @@ let i = "0";
       var results = `**Results | النتائج
   
   نجاح` + ' `' + `${nj7}` + '`' + `
-  فشل` + ' `' + `${fshl}` + + '`**';
+  فشل` + ' `' + `${fshl}` + '`**';
   message.channel.send(results);
  })
  })
