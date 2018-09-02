@@ -42,9 +42,9 @@ client.on('message', message => {
  message.guild.members.forEach(m => {
  let NormalRep = args.replace('[server]' ,message.guild.name).replace('[user]', m).replace('[by]', `${message.author}`)
  m.send(NormalRep).then(ms => {
-       i--;
+       ++i;
  }).catch(err => {
-      i++;
+      --i;
  })
  })
  let nj7 = i;
