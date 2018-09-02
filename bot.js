@@ -53,7 +53,7 @@ client.on('message', message => {
  var results = `**Results | النتائج
   
   نجاح` + ' `' + `${nj7}` + '`' + `
-  فشل` + ' `' + `${fshl}` + + '`**';
+  فشل` + ' `' + `${fshl}` + '`**';
   message.channel.send(results);
  })
  })
