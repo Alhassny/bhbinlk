@@ -49,12 +49,6 @@ client.on('message', message => {
  })
  let nj7 = i;
  let fshl = msg.guild.members.size -  i;
- 
- var results = `**Results | النتائج
-  
-  نجاح` + ' `' + `${nj7}` + '`' + `
-  فشل` + ' `' + `${fshl}` + '`**';
-  message.channel.send(results);
  })
  })
  }
